@@ -98,8 +98,8 @@ $(function () {
                 });
 
                 it('feed has at least one entry', function () {
-                    const feed = document.querySelector(".feed");
-                    expect(feed.firstChild.length > 0).toBe(true);
+                    const feed = document.querySelectorAll('.feed .entry')
+                    expect(feed.length > 0).toBe(true);
 
                 });
             });
