@@ -1,11 +1,3 @@
-/* app.js
- *
- * This is our RSS feed reader application. It uses the Google
- * Feed Reader API to grab RSS feeds as JSON object we can make
- * use of. It also uses the Handlebars templating library and
- * jQuery.
- */
-
 // The names and URLs to all of the feeds we'd like available.
 var allFeeds = [
     {
@@ -32,14 +24,7 @@ function init() {
     loadFeed(0);
 }
 
-/* This function performs everything necessary to load a
- * feed using the Google Feed Reader API. It will then
- * perform all of the DOM operations required to display
- * feed entries on the page. Feeds are referenced by their
- * index position within the allFeeds array.
- * This function all supports a callback as the second parameter
- * which will be called after everything has run successfully.
- */
+// Load feed using the Google Feed Reader API.
  function loadFeed(id, cb) {
      var feedUrl = allFeeds[id].url,
          feedName = allFeeds[id].name;
